@@ -1,0 +1,19 @@
+#ifndef vban_H_
+#define vban_H_
+
+#define HEADER_OFFSET 0
+#define SR_OFFSET 4
+#define NBS_OFFSET 5
+#define NBC_OFFSET 6
+#define FORMAT_BIT_OFFSET 7
+#define STREAMNAME_OFFSET 8
+#define FRAME_OFFSET 24
+
+#include "main.h"
+#include <string.h>
+#include <stdio.h>
+struct vban_header;
+struct vban_header parse_vban_header(char *ptr);
+
+//struct vban_header parse_vban_header(char *ptr);
+#endif
