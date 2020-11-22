@@ -18722,6 +18722,26 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 Src/main.o
  .debug_macro   0x00000000       0xdd Src/main.o
  .debug_macro   0x00000000       0x16 Src/main.o
+ .group         0x00000000        0xc Src/sams_discount_fft.o
+ .text          0x00000000        0x0 Src/sams_discount_fft.o
+ .data          0x00000000      0xfe0 Src/sams_discount_fft.o
+ .bss           0x00000000        0x0 Src/sams_discount_fft.o
+ .text.fft_stage
+                0x00000000        0x4 Src/sams_discount_fft.o
+ .debug_info    0x00000000      0x252 Src/sams_discount_fft.o
+ .debug_abbrev  0x00000000       0xea Src/sams_discount_fft.o
+ .debug_loc     0x00000000       0x21 Src/sams_discount_fft.o
+ .debug_aranges
+                0x00000000       0x20 Src/sams_discount_fft.o
+ .debug_ranges  0x00000000       0x10 Src/sams_discount_fft.o
+ .debug_macro   0x00000000       0x1b Src/sams_discount_fft.o
+ .debug_macro   0x00000000      0xa54 Src/sams_discount_fft.o
+ .debug_line    0x00000000       0x84 Src/sams_discount_fft.o
+ .debug_str     0x00000000     0x2dcc Src/sams_discount_fft.o
+ .comment       0x00000000       0x80 Src/sams_discount_fft.o
+ .debug_frame   0x00000000       0x20 Src/sams_discount_fft.o
+ .ARM.attributes
+                0x00000000       0x39 Src/sams_discount_fft.o
  .group         0x00000000        0xc Src/stm32f7xx_hal_msp.o
  .group         0x00000000        0xc Src/stm32f7xx_hal_msp.o
  .group         0x00000000        0xc Src/stm32f7xx_hal_msp.o
@@ -19897,6 +19917,7 @@ LOAD Middlewares/Third_Party/LwIP/src/netif/ppp/vj.o
 LOAD Src/ethernetif.o
 LOAD Src/lwip.o
 LOAD Src/main.o
+LOAD Src/sams_discount_fft.o
 LOAD Src/stm32f7xx_hal_msp.o
 LOAD Src/stm32f7xx_it.o
 LOAD Src/syscalls.o

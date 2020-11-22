@@ -90,6 +90,7 @@
 "Src/ethernetif.o"
 "Src/lwip.o"
 "Src/main.o"
+"Src/sams_discount_fft.o"
 "Src/stm32f7xx_hal_msp.o"
 "Src/stm32f7xx_it.o"
 "Src/syscalls.o"
