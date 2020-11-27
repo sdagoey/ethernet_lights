@@ -9,7 +9,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "udp_scratch.h"
-#include "vban.c"
+#include "vban.h"
 /* USER CODE END Includes */
 
 

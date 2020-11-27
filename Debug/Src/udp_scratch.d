@@ -61,7 +61,7 @@ Src/udp_scratch.o: ../Src/udp_scratch.c \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h \
- ../Src/vban.c D:/workspace/ethernet_lights/Inc/vban.h
+ D:/workspace/ethernet_lights/Inc/vban.h
 
 D:/workspace/ethernet_lights/Inc/udp_scratch.h:
 
@@ -186,7 +186,5 @@ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h
 D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h:
 
 D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h:
-
-../Src/vban.c:
 
 D:/workspace/ethernet_lights/Inc/vban.h:

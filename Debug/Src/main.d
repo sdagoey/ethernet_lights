@@ -71,7 +71,8 @@ Src/main.o: ../Src/main.c D:/workspace/ethernet_lights/Inc/main.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h \
  D:/workspace/ethernet_lights/Inc/ethernetif.h \
- D:/workspace/ethernet_lights/Inc/vban.h
+ D:/workspace/ethernet_lights/Inc/vban.h \
+ D:/workspace/ethernet_lights/Inc/sams_discount_fft.h
 
 D:/workspace/ethernet_lights/Inc/main.h:
 
@@ -220,3 +221,5 @@ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/
 D:/workspace/ethernet_lights/Inc/ethernetif.h:
 
 D:/workspace/ethernet_lights/Inc/vban.h:
+
+D:/workspace/ethernet_lights/Inc/sams_discount_fft.h:

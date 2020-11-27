@@ -18,6 +18,16 @@ RM := rm -rf
 -include Middlewares/Third_Party/LwIP/src/apps/mqtt/subdir.mk
 -include Middlewares/Third_Party/LwIP/src/api/subdir.mk
 -include Drivers/STM32F7xx_HAL_Driver/Src/subdir.mk
+-include Drivers/CMSIS/DSP/TransformFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/SupportFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/StatisticsFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/MatrixFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/FilteringFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/FastMathFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/ControllerFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/ComplexMathFunctions/subdir.mk
+-include Drivers/CMSIS/DSP/CommonTables/subdir.mk
+-include Drivers/CMSIS/DSP/BasicMathFunctions/subdir.mk
 -include subdir.mk
 -include objects.mk
 

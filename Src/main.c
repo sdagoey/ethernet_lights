@@ -25,6 +25,8 @@
 #include "udp_scratch.h"
 #include "ethernetif.h"
 #include "vban.h"
+#include "sams_discount_fft.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -119,11 +121,25 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int oneshot = 0;
+  float dataset[256][2];
+  float fft_dataset[256][2];
   while (1)
   {
     /* USER CODE END WHILE */
       HAL_Delay(500);
       HAL_GPIO_TogglePin(GPIOB,LD1_Pin);
+      if(oneshot == 0){
+    	  oneshot = 1;
+
+    	  for(int i =0; i < sizeof(sine_table)/sizeof(sine_table[0]); i++){
+    		  dataset[i][0] = sine_table[i];
+    		  dataset[i][1] = 0;
+    	  }
+
+    	  //fft_dataset = *fft_stage(dataset);
+    	  //udp_scratch_send((uint16_t) dataset[0], 256);
+      }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -408,7 +424,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     ethernetif_input(&gnetif);
     if(mscount == 1000){
             mscount=0;
-            //HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
+            HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
     }
 }
 /* USER CODE END 4 */

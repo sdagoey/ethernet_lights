@@ -30,6 +30,12 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal.h"
 
+#include <stdlib.h>
+#include <math.h>
+#include "arm_math.h"
+#include <stdlib.h>
+#include <string.h>
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 

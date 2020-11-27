@@ -15,6 +15,16 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Drivers/CMSIS/DSP/BasicMathFunctions \
+Drivers/CMSIS/DSP/CommonTables \
+Drivers/CMSIS/DSP/ComplexMathFunctions \
+Drivers/CMSIS/DSP/ControllerFunctions \
+Drivers/CMSIS/DSP/FastMathFunctions \
+Drivers/CMSIS/DSP/FilteringFunctions \
+Drivers/CMSIS/DSP/MatrixFunctions \
+Drivers/CMSIS/DSP/StatisticsFunctions \
+Drivers/CMSIS/DSP/SupportFunctions \
+Drivers/CMSIS/DSP/TransformFunctions \
 Drivers/STM32F7xx_HAL_Driver/Src \
 Middlewares/Third_Party/LwIP/src/api \
 Middlewares/Third_Party/LwIP/src/apps/mqtt \
