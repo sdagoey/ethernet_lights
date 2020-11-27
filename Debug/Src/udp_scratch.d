@@ -32,6 +32,10 @@ Src/udp_scratch.o: ../Src/udp_scratch.c \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
+ D:/workspace/ethernet_lights/Inc/type_def.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h \
+ D:/workspace/ethernet_lights/Inc/type_def.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
  D:/workspace/ethernet_lights/Inc/lwipopts.h \
@@ -128,6 +132,14 @@ D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_
 D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 
 D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
+
+D:/workspace/ethernet_lights/Inc/type_def.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h:
+
+D:/workspace/ethernet_lights/Inc/type_def.h:
 
 D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h:
 

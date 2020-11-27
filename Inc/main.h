@@ -29,9 +29,11 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal.h"
-
+#include "type_def.h"
 #include <stdlib.h>
 #include <math.h>
+#define ARM_MATH_CM7
+
 #include "arm_math.h"
 #include <stdlib.h>
 #include <string.h>
@@ -136,6 +138,21 @@ void Error_Handler(void);
 #define SRC_IP_ADDR1 168
 #define SRC_IP_ADDR2 1
 #define SRC_IP_ADDR3 200
+
+#define FIR_PROCESS 0
+#define FFT_PROCESS 1
+
+#define Float32 0
+#define Q15 		1
+#define Q31 		2
+#define LPF			0
+#define HPF			1
+
+#define FFT_INVERSE_FLAG        ((uint8_t)0)
+#define FFT_Normal_OUTPUT_FLAG  ((uint8_t)1)
+#define BUFFER_SIZE    		240
+#define NB_SAMPLES     		64
+#define SAMPLES						2048 			/* 256 real party and 256 imaginary parts */
 
 /* USER CODE END Private defines */
 

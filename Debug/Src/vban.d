@@ -30,7 +30,11 @@ Src/vban.o: ../Src/vban.c D:/workspace/ethernet_lights/Inc/vban.h \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
- D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
+ D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
+ D:/workspace/ethernet_lights/Inc/type_def.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h \
+ D:/workspace/ethernet_lights/Inc/type_def.h
 
 D:/workspace/ethernet_lights/Inc/vban.h:
 
@@ -97,3 +101,11 @@ D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_
 D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 
 D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
+
+D:/workspace/ethernet_lights/Inc/type_def.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h:
+
+D:/workspace/ethernet_lights/Inc/type_def.h:
