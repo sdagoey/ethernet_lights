@@ -33,10 +33,11 @@ extern "C" {
 #include <stdlib.h>
 #include <math.h>
 #define ARM_MATH_CM7
-
+#include "vban.h"
 #include "arm_math.h"
 #include <stdlib.h>
 #include <string.h>
+#include "fft.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -148,8 +149,8 @@ void Error_Handler(void);
 #define LPF			0
 #define HPF			1
 
-#define FFT_INVERSE_FLAG        ((uint8_t)0)
-#define FFT_Normal_OUTPUT_FLAG  ((uint8_t)1)
+//#define FFT_INVERSE_FLAG        ((uint8_t)0)
+//#define FFT_Normal_OUTPUT_FLAG  ((uint8_t)1)
 #define BUFFER_SIZE    		240
 #define NB_SAMPLES     		64
 #define SAMPLES						2048 			/* 256 real party and 256 imaginary parts */

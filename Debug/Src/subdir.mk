@@ -5,9 +5,9 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/ethernetif.c \
+../Src/fft.c \
 ../Src/lwip.c \
 ../Src/main.c \
-../Src/sams_discount_fft.c \
 ../Src/stm32f7xx_hal_msp.c \
 ../Src/stm32f7xx_it.c \
 ../Src/syscalls.c \
@@ -17,9 +17,9 @@ C_SRCS += \
 
 OBJS += \
 ./Src/ethernetif.o \
+./Src/fft.o \
 ./Src/lwip.o \
 ./Src/main.o \
-./Src/sams_discount_fft.o \
 ./Src/stm32f7xx_hal_msp.o \
 ./Src/stm32f7xx_it.o \
 ./Src/syscalls.o \
@@ -29,9 +29,9 @@ OBJS += \
 
 C_DEPS += \
 ./Src/ethernetif.d \
+./Src/fft.d \
 ./Src/lwip.d \
 ./Src/main.d \
-./Src/sams_discount_fft.d \
 ./Src/stm32f7xx_hal_msp.d \
 ./Src/stm32f7xx_it.d \
 ./Src/syscalls.d \
