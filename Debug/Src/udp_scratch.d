@@ -34,10 +34,12 @@ Src/udp_scratch.o: ../Src/udp_scratch.c \
  D:/workspace/ethernet_lights/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  D:/workspace/ethernet_lights/Inc/type_def.h \
  D:/workspace/ethernet_lights/Inc/vban.h \
+ D:/workspace/ethernet_lights/Inc/fft.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h \
  D:/workspace/ethernet_lights/Inc/type_def.h \
- D:/workspace/ethernet_lights/Inc/fft.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
  D:/workspace/ethernet_lights/Inc/lwipopts.h \
@@ -68,7 +70,8 @@ Src/udp_scratch.o: ../Src/udp_scratch.c \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h \
  D:/workspace/ethernet_lights/Inc/vban.h \
- D:/workspace/ethernet_lights/Inc/fft.h
+ D:/workspace/ethernet_lights/Inc/fft.h \
+ D:/workspace/ethernet_lights/Inc/arm_fft_bin_data.h
 
 D:/workspace/ethernet_lights/Inc/udp_scratch.h:
 
@@ -140,13 +143,17 @@ D:/workspace/ethernet_lights/Inc/type_def.h:
 
 D:/workspace/ethernet_lights/Inc/vban.h:
 
+D:/workspace/ethernet_lights/Inc/fft.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h:
+
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
 
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h:
 
 D:/workspace/ethernet_lights/Inc/type_def.h:
 
-D:/workspace/ethernet_lights/Inc/fft.h:
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
 
 D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h:
 
@@ -209,3 +216,5 @@ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/
 D:/workspace/ethernet_lights/Inc/vban.h:
 
 D:/workspace/ethernet_lights/Inc/fft.h:
+
+D:/workspace/ethernet_lights/Inc/arm_fft_bin_data.h:

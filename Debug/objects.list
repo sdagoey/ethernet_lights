@@ -359,6 +359,7 @@
 "Middlewares/Third_Party/LwIP/src/netif/ppp/upap.o"
 "Middlewares/Third_Party/LwIP/src/netif/ppp/utils.o"
 "Middlewares/Third_Party/LwIP/src/netif/ppp/vj.o"
+"Src/arm_fft_bin_data.o"
 "Src/ethernetif.o"
 "Src/fft.o"
 "Src/lwip.o"

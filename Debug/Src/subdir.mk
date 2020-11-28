@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/arm_fft_bin_data.c \
 ../Src/ethernetif.c \
 ../Src/fft.c \
 ../Src/lwip.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 ../Src/vban.c 
 
 OBJS += \
+./Src/arm_fft_bin_data.o \
 ./Src/ethernetif.o \
 ./Src/fft.o \
 ./Src/lwip.o \
@@ -28,6 +30,7 @@ OBJS += \
 ./Src/vban.o 
 
 C_DEPS += \
+./Src/arm_fft_bin_data.d \
 ./Src/ethernetif.d \
 ./Src/fft.d \
 ./Src/lwip.d \

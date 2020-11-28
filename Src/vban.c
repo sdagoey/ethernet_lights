@@ -13,7 +13,8 @@ struct vban_packet parse_vban_packet(char *ptr){
     for(uint16_t i = 0; i < 256; i++){
     	uint16_t temp;
     	memcpy(&temp,ptr+PAYLOAD_START+2*i,2);
-    	parsed_packet.payload[i] = (temp >> 8 | temp << 8);
+    	parsed_packet.payload[i] = (float32_t) (temp >> 8 | temp << 8);
+    	//parsed_packet.payload[i] = temp;
     }
     return parsed_packet;
 }

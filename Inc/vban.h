@@ -13,6 +13,10 @@
 #include "main.h"
 #include <string.h>
 #include <stdio.h>
+#include "fft.h"
+#include "type_def.h"
+#include "arm_common_tables.h"
+
 struct vban_packet{
     char vban[4];
     uint8_t format_sr;
@@ -21,7 +25,7 @@ struct vban_packet{
     uint8_t format_bit;
     char streamname[16];
     uint32_t nuFrame;
-    uint16_t payload[256];
+    float32_t payload[256];
 };
 struct vban_packet parse_vban_packet(char *ptr);
 //struct vban_header parse_vban_header(char *ptr);

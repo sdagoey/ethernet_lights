@@ -26,6 +26,9 @@
 #include "ethernetif.h"
 #include "vban.h"
 
+
+#include "arm_math.h"
+#include "arm_const_structs.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -113,6 +116,7 @@ int main(void)
   err_t errout = ethernetif_init(&gnetif);
   //HAL_GPIO_WritePin(GPIOB,LD1_Pin,errout != ERR_OK);
   HAL_Delay(500);
+
   udp_scratch_connect();
   udp_receive_init();
   HAL_TIM_Base_Start_IT(&htim3);
@@ -127,8 +131,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-      HAL_Delay(500);
-      //HAL_GPIO_TogglePin(GPIOB,LD2_Pin);
+
 
     /* USER CODE BEGIN 3 */
   }

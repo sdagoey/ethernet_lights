@@ -11,6 +11,8 @@
 #include "udp_scratch.h"
 #include "vban.h"
 #include "fft.h"
+#include "arm_fft_bin_data.h"
+#define FFT_Length_Tab 256
 /* USER CODE END Includes */
 
 
@@ -21,7 +23,8 @@ uint8_t txData[100];
 struct udp_pcb *upcb;
 struct vban_packet parsed_packet;
 extern uint16_t * rxData;
-extern float32_t fft_dataset[FFT_Length_Tab*2];
+extern float32_t fft_dataset[256*2];
+extern float32_t testInput_f32_10khz[2048];
 extern int compute_done;
 
 /* USER CODE END Private variables */
@@ -98,11 +101,12 @@ void udp_receive_callback(void *arg, struct udp_pcb *upcb, struct pbuf *p, const
     			for(uint16_t i = 0; i < 255; i ++){
     				//fft_dataset[2*i] = 1;
     				temp_dataset[2*i] = (float32_t) (parsed_packet.payload[i]);
-    				temp_dataset[2*i+1] = 0;
+    				temp_dataset[2*i+1] = (float32_t) 0;
     			}
-    			memcpy(fft_dataset,&temp_dataset,2*FFT_Length_Tab);
+    			memcpy(fft_dataset,&temp_dataset,2*4*256);
+    			//memcpy(fft_dataset,testInput_f32_10khz,2*FFT_Length_Tab*4);
     			compute_done = 0;
-    			FFT_PROCESSING(256);
+    			FFT_PROCESSING();
     		}
     		else{
     			compare_id[1] = 'b';

@@ -33,10 +33,12 @@ Src/main.o: ../Src/main.c D:/workspace/ethernet_lights/Inc/main.h \
  D:/workspace/ethernet_lights/Inc/type_def.h \
  D:/workspace/ethernet_lights/Inc/vban.h \
  D:/workspace/ethernet_lights/Inc/main.h \
+ D:/workspace/ethernet_lights/Inc/fft.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h \
  D:/workspace/ethernet_lights/Inc/type_def.h \
- D:/workspace/ethernet_lights/Inc/fft.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
  D:/workspace/ethernet_lights/Inc/lwip.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
  D:/workspace/ethernet_lights/Inc/lwipopts.h \
@@ -77,7 +79,9 @@ Src/main.o: ../Src/main.c D:/workspace/ethernet_lights/Inc/main.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
  D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h \
  D:/workspace/ethernet_lights/Inc/ethernetif.h \
- D:/workspace/ethernet_lights/Inc/vban.h
+ D:/workspace/ethernet_lights/Inc/vban.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_const_structs.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h
 
 D:/workspace/ethernet_lights/Inc/main.h:
 
@@ -149,13 +153,17 @@ D:/workspace/ethernet_lights/Inc/vban.h:
 
 D:/workspace/ethernet_lights/Inc/main.h:
 
+D:/workspace/ethernet_lights/Inc/fft.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h:
+
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
 
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h:
 
 D:/workspace/ethernet_lights/Inc/type_def.h:
 
-D:/workspace/ethernet_lights/Inc/fft.h:
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
 
 D:/workspace/ethernet_lights/Inc/lwip.h:
 
@@ -238,3 +246,7 @@ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/
 D:/workspace/ethernet_lights/Inc/ethernetif.h:
 
 D:/workspace/ethernet_lights/Inc/vban.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_const_structs.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h:

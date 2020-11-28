@@ -34,10 +34,12 @@ Src/stm32f7xx_hal_msp.o: ../Src/stm32f7xx_hal_msp.c \
  D:/workspace/ethernet_lights/Inc/type_def.h \
  D:/workspace/ethernet_lights/Inc/vban.h \
  D:/workspace/ethernet_lights/Inc/main.h \
+ D:/workspace/ethernet_lights/Inc/fft.h \
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h \
  D:/workspace/ethernet_lights/Inc/type_def.h \
- D:/workspace/ethernet_lights/Inc/fft.h
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h
 
 D:/workspace/ethernet_lights/Inc/main.h:
 
@@ -109,10 +111,14 @@ D:/workspace/ethernet_lights/Inc/vban.h:
 
 D:/workspace/ethernet_lights/Inc/main.h:
 
+D:/workspace/ethernet_lights/Inc/fft.h:
+
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h:
+
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
 
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/core_cm7.h:
 
 D:/workspace/ethernet_lights/Inc/type_def.h:
 
-D:/workspace/ethernet_lights/Inc/fft.h:
+D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h:
