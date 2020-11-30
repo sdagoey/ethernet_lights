@@ -8,7 +8,7 @@
 #define FORMAT_BIT_OFFSET 7
 #define STREAMNAME_OFFSET 8
 #define FRAME_OFFSET 24
-#define PAYLOAD_START 27
+#define PAYLOAD_START 28
 
 #include "main.h"
 #include <string.h>
@@ -28,7 +28,6 @@ struct vban_packet{
     float32_t payload[256];
 };
 struct vban_packet parse_vban_packet(char *ptr);
-//struct vban_header parse_vban_header(char *ptr);
-
-//struct vban_header parse_vban_header(char *ptr);
+float32_t hamming_window_256[256];
+float32_t hanning_window_256[256];
 #endif

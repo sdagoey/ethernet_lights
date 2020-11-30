@@ -26,6 +26,7 @@ extern uint16_t * rxData;
 extern float32_t fft_dataset[256*2];
 extern float32_t testInput_f32_10khz[2048];
 extern int compute_done;
+extern float32_t fft_mag_data[FFT_Length_Tab/2];
 
 /* USER CODE END Private variables */
 
@@ -82,37 +83,67 @@ void udp_scratch_send(uint16_t * txData, uint16_t count) {
         // copy txData into pbuf
         pbuf_take(p, (uint16_t *) txData, length);
         err = udp_send(upcb, p);
-        //HAL_GPIO_WritePin(GPIOB, LD3_Pin, err == ERR_OK);
+//        HAL_GPIO_WritePin(GPIOB, LD3_Pin, err == ERR_OK);
         pbuf_free(p);
     }
 }
+void udp_char_send(char * txData, uint16_t length){
+    struct pbuf *p;
+    //uint16_t length = sizeof(&txData);
+    p = pbuf_alloc(PBUF_TRANSPORT, length, PBUF_POOL);
+    err_t err;
 
+    if (p != NULL) {
+        // copy txData into pbuf
+        pbuf_take(p, (char *) txData, length);
+        err = udp_send(upcb, p);
+//        HAL_GPIO_WritePin(GPIOB, LD3_Pin, err == ERR_OK);
+        pbuf_free(p);
+    }
+}
+void udp_float_send(uint32_t * txData, uint16_t length) {
+    struct pbuf *p;
+    //uint16_t length = sizeof(*txData);
+    p = pbuf_alloc(PBUF_TRANSPORT, length, PBUF_POOL);
+    err_t err;
 
+    if (p != NULL) {
+        // copy txData into pbuf
+        pbuf_take(p, txData, length);
+        err = udp_send(upcb, p);
+//        HAL_GPIO_WritePin(GPIOB, LD3_Pin, err == ERR_OK);
+        pbuf_free(p);
+    }
+}
 void udp_receive_callback(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, uint16_t port) {
     char * ptr = p->payload;
     char compare_id[4] = {'V','B','A','N'};
     char compare_streamname[16] = {'S','t','r','e','a','m','1'};
     parsed_packet = parse_vban_packet(ptr);
     float32_t temp_dataset[FFT_Length_Tab*2];
+//    HAL_GPIO_WritePin(GPIOB, LD1_Pin, compute_done);
     if(!memcmp(parsed_packet.vban,compare_id,sizeof(compare_id))){
     	if(!memcmp(parsed_packet.streamname,compare_streamname,sizeof(compare_streamname)))
     	{
     		if(compute_done){
+    		    //udp_scratch_send(p->payload,p->len);
+
     			for(uint16_t i = 0; i < 255; i ++){
     				//fft_dataset[2*i] = 1;
     				temp_dataset[2*i] = (float32_t) (parsed_packet.payload[i]);
     				temp_dataset[2*i+1] = (float32_t) 0;
     			}
-    			memcpy(fft_dataset,&temp_dataset,2*4*256);
+    			//udp_scratch_send(temp_dataset, 256);
+    			memcpy(fft_dataset,&temp_dataset,sizeof(temp_dataset));
     			//memcpy(fft_dataset,testInput_f32_10khz,2*FFT_Length_Tab*4);
     			compute_done = 0;
+    			//udp_scratch_send(parsed_packet.payload,2*256);
     			FFT_PROCESSING();
     		}
     		else{
     			compare_id[1] = 'b';
     		}
     	}
-      //HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,0);
     }
 	pbuf_free(p);
 }

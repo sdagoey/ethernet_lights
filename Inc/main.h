@@ -36,6 +36,7 @@ extern "C" {
 #include "vban.h"
 #include "arm_math.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include "fft.h"
 
@@ -154,7 +155,7 @@ void Error_Handler(void);
 #define BUFFER_SIZE    		240
 #define NB_SAMPLES     		64
 #define SAMPLES						2048 			/* 256 real party and 256 imaginary parts */
-
+#define FFT_Length_Tab 256
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

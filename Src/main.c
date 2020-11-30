@@ -76,7 +76,7 @@ static void MX_TIM4_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+float32_t fft_dataset[FFT_Length_Tab*2];
 /* USER CODE END 0 */
 
 /**
@@ -131,7 +131,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  HAL_Delay(500);
+//	  float32_t bull_var = -5.2;
+	  char * test_string = {"Fake_STRING"};
+//	  gcvt(bull_var, 1,test_string);
+	  //udp_char_send(test_string, 15);
 
     /* USER CODE BEGIN 3 */
   }
@@ -415,9 +419,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     mscount += 1;
     ethernetif_set_link(&gnetif);
     ethernetif_input(&gnetif);
+    //udp_scratch_connect();
+
     if(mscount == 1000){
             mscount=0;
-            //HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
+//            HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
     }
 }
 /* USER CODE END 4 */

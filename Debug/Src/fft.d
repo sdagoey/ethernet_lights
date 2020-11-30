@@ -41,7 +41,37 @@ Src/fft.o: ../Src/fft.c D:/workspace/ethernet_lights/Inc/main.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_math.h \
  D:/workspace/ethernet_lights/Inc/fft.h \
  D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_const_structs.h \
- D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h
+ D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h \
+ D:/workspace/ethernet_lights/Inc/udp_scratch.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
+ D:/workspace/ethernet_lights/Inc/lwipopts.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/debug.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/arch.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/system/arch/cc.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/system/arch/cpu.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/err.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/udp.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/netif.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip_addr.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip4_addr.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip6_addr.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/stats.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/mem.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/memp.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_std.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip4.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip4.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip6.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
+ D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h
 
 D:/workspace/ethernet_lights/Inc/main.h:
 
@@ -130,3 +160,63 @@ D:/workspace/ethernet_lights/Inc/fft.h:
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_const_structs.h:
 
 D:/workspace/ethernet_lights/Drivers/CMSIS/Include/arm_common_tables.h:
+
+D:/workspace/ethernet_lights/Inc/udp_scratch.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/opt.h:
+
+D:/workspace/ethernet_lights/Inc/lwipopts.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/debug.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/arch.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/system/arch/cc.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/system/arch/cpu.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/err.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/netif.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip_addr.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/def.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip4_addr.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip6_addr.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/def.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/stats.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/mem.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/memp.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_std.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip4.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip4.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/ip6.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h:
+
+D:/workspace/ethernet_lights/Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h:
