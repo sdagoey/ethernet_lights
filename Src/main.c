@@ -112,14 +112,21 @@ int main(void)
   MX_USART3_UART_Init();
   MX_LWIP_Init();
   MX_TIM4_Init();
+
   /* USER CODE BEGIN 2 */
   err_t errout = ethernetif_init(&gnetif);
   //HAL_GPIO_WritePin(GPIOB,LD1_Pin,errout != ERR_OK);
-  HAL_Delay(500);
+//
+//  HAL_Delay(500);
+  HAL_TIM_Base_Start(&htim4);
 
   udp_scratch_connect();
   udp_receive_init();
+  HAL_TIM_PWM_Start_IT(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start_IT(&htim4, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start_IT(&htim4, TIM_CHANNEL_3);
   HAL_TIM_Base_Start_IT(&htim3);
+
   if (netif_is_up(&gnetif)) {
       //HAL_GPIO_WritePin(GPIOB, LD2_Pin, 1);
   }
@@ -131,9 +138,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_Delay(500);
+//	  HAL_Delay(500);
 //	  float32_t bull_var = -5.2;
-	  char * test_string = {"Fake_STRING"};
+	  //char * test_string = {"Fake_STRING"};
+
 //	  gcvt(bull_var, 1,test_string);
 	  //udp_char_send(test_string, 15);
 
@@ -265,10 +273,10 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 54000;
+  htim4.Init.Prescaler = 5400;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 0;
-  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
+  htim4.Init.Period = 6;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV2;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
   {
@@ -423,7 +431,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
     if(mscount == 1000){
             mscount=0;
-//            HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
+            HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
     }
 }
 /* USER CODE END 4 */
