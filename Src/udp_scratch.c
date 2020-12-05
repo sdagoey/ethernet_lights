@@ -26,6 +26,7 @@ extern uint16_t * rxData;
 extern float32_t fft_dataset[256*2];
 extern float32_t testInput_f32_10khz[2048];
 extern int compute_done;
+extern int watchdog;
 extern float32_t fft_mag_data[FFT_Length_Tab/2];
 
 /* USER CODE END Private variables */
@@ -138,6 +139,7 @@ void udp_receive_callback(void *arg, struct udp_pcb *upcb, struct pbuf *p, const
     			//memcpy(fft_dataset,testInput_f32_10khz,2*FFT_Length_Tab*4);
     			compute_done = 0;
     			//udp_scratch_send(parsed_packet.payload,2*256);
+    			watchdog = 0;
     			FFT_PROCESSING();
     		}
     		else{

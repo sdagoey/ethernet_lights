@@ -62,6 +62,7 @@ uint16_t * rxData;
 //float32_t fft_dataset[FFT_Length_Tab*2];
 //float32_t fft_mag_data[FFT_Length_Tab];
 int compute_done = 1;
+int watchdog = 1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -275,8 +276,8 @@ static void MX_TIM4_Init(void)
   htim4.Instance = TIM4;
   htim4.Init.Prescaler = 5400;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 6;
-  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV2;
+  htim4.Init.Period = 100;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
   {
@@ -299,7 +300,10 @@ static void MX_TIM4_Init(void)
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
   sConfigOC.Pulse = 0;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  if(DRIVER_PRESENT){
+	  sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
+  }
+  else sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
@@ -432,6 +436,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if(mscount == 1000){
             mscount=0;
             HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
+            if(watchdog=1){
+          	  __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_1, 0);
+          	  __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_3, 0);
+          	  __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_2, 0);
+            }
+            watchdog=1;
     }
 }
 /* USER CODE END 4 */

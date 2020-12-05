@@ -150,6 +150,8 @@ void Error_Handler(void);
 #define LPF			0
 #define HPF			1
 
+#define DRIVER_PRESENT 1
+
 //#define FFT_INVERSE_FLAG        ((uint8_t)0)
 //#define FFT_Normal_OUTPUT_FLAG  ((uint8_t)1)
 #define BUFFER_SIZE    		240
